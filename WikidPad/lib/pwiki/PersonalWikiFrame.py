@@ -438,25 +438,24 @@ camelCaseWordsEnabled: false;a=[camelCaseWordsEnabled: false]\\n
 
 
     def getExtension(self, extensionName, fileName):
+        '''
+        Import the extensions as module.
+        Return the module
+        '''
         extensionFileName = os.path.join(self.globalConfigSubDir,
                 'user_extensions', fileName)
         if os.path.exists(pathEnc(extensionFileName)):
-            userUserExtension = loadEntireFile(extensionFileName, True)
-        else:
-            userUserExtension = None
+            importModuleFromFile( extensionName, extensionFileName)
 
         extensionFileName = os.path.join(self.wikiAppDir, 'user_extensions',
                 fileName)
         if os.path.exists(pathEnc(extensionFileName)):
-            userExtension = loadEntireFile(extensionFileName, True)
-        else:
-            userExtension = None
+            importModuleFromFile( extensionName, extensionFileName)
 
         extensionFileName = os.path.join(self.wikiAppDir, 'extensions', fileName)
-        systemExtension = loadEntireFile(extensionFileName, True)
+        module = importModuleFromFile( extensionName, extensionFileName)
+        return module
 
-        return importCode(systemExtension, userExtension, userUserExtension,
-                extensionName)
 
 
     def getCurrentWikiWord(self):
@@ -5953,43 +5952,25 @@ class TaskBarIcon(wx.adv.TaskBarIcon):
         return tbMenu
 
 
-def importCode(code, usercode, userUserCode, name, add_to_sys_modules=False):
+
+def importModuleFromFile(module_name: str, file_path: str):
     """
-    Import dynamically generated code as a module. 
-    usercode and code are the objects containing the code
-    (a string, a file handle or an actual compiled code object,
-    same types as accepted by an exec statement), usercode
-    may be None. code is executed first, usercode thereafter
-    and can overwrite settings in code. The name is the name to give to the module,
-    and the final argument says wheter to add it to sys.modules
-    or not. If it is added, a subsequent import statement using
-    name will return this module. If it is not added to sys.modules
-    import will try to load it in the normal fashion.
-
-    import foo
-
-    is equivalent to
-
-    foofile = open("/path/to/foo.py")
-    foo = importCode(foofile,"foo",1)
-
+    Load a module from a specified file_path
+    (replaces importCode)
     Returns a newly generated module.
     """
-    import sys,imp
-
-    module = imp.new_module(name)
-
-    exec(code, module.__dict__)
-    if usercode is not None:
-        exec(usercode, module.__dict__)
-    if userUserCode is not None:
-        exec(userUserCode, module.__dict__)
-    if add_to_sys_modules:
-        sys.modules[name] = module
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(module_name, file_path)
+    module = importlib.util.module_from_spec(spec)
+    # sys.modules[module_name] = module
+    spec.loader.exec_module(module)
 
     return module
 
 
+
+# def importCode(code, usercode, userUserCode, name, add_to_sys_modules=False):
+#     Replaced by importModuleFromFile (MM 2024-07-16). Does not work with Python 3.12  (module imp removed)
 
 
 _SYSTRAY_CONTEXT_MENU_BASE = \

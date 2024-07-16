@@ -327,13 +327,17 @@ class PluginManager:
            Files and directories given in exludeFiles are not loaded at all. Also 
            directories are searched in order for plugins. Therefore plugins
            appearing in earlier directories are not loaded from later ones."""
-        import imp
+        
+        # imp deprecated since python 3.4/removed in 3.12:
+        # Use importlib.util.module_from_spec() instead.
+        # import imp
+
         exclusions = excludeFiles[:]
         
         for dirNum, directory in enumerate(self.directories):
-            sys.path.append(os.path.dirname(directory))
             if not os.access(mbcsEnc(directory, "replace")[0], os.F_OK):
                 continue
+            sys.path.append(os.path.dirname(directory))
             files = os.listdir(directory)
 
             if dirNum == self.systemDirIdx:
@@ -342,9 +346,13 @@ class PluginManager:
                 packageName = "cruelimportExtensionsPackage%i_%i" % \
                         (id(self), dirNum)
 
-            package = imp.new_module(packageName)
-            package.__path__ = [directory]
+            import importlib.util
+            package_path = os.path.join(directory, '__init__.py')
+            spec = importlib.util.spec_from_file_location(packageName, package_path)
+            package = importlib.util.module_from_spec(spec)
             sys.modules[packageName] = package
+            # spec.loader.exec_module(package)    # not needed (pkg was not exec'd in previous version)?
+
 
             for name in files:
                 try:
@@ -355,10 +363,18 @@ class PluginManager:
                         continue
                     if os.path.isfile(fullname):
                         if ext == '.py':
-                            with open(fullname, "rb") as f:
-                                module = imp.load_module(packageName + "." + moduleName, f,
-                                        fullname, (".py", "r", imp.PY_SOURCE))
+                            import importlib.util
+                            spec = importlib.util.spec_from_file_location(packageName + "." + moduleName, fullname)
+                            module = importlib.util.module_from_spec(spec)
+                            importlib.import_module(packageName + "." + moduleName)
+                            spec.loader.exec_module(module)
+
+                            # with open(fullname, "rb") as f:
+                            #     module = imp.load_module(packageName + "." + moduleName, f,
+                            #             fullname, (".py", "r", imp.PY_SOURCE))
                         elif ext == '.zip':
+                            print("FIXME PluginManager.loadPluginsFixed(): .zip not implemented yet -> skipped", fullname)
+                            continue
                             module = imp.new_module(
                                     packageName + "." + moduleName)
                             module.__path__ = [fullname]

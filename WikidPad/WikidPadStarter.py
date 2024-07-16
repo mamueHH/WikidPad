@@ -8,7 +8,7 @@
 
 
 
-import sys, os, traceback, os.path, glob, shutil, imp, warnings, configparser
+import sys, os, traceback, os.path, glob, shutil, warnings, configparser
 
 if not hasattr(sys, 'frozen'):
     origin = __spec__.origin
@@ -77,7 +77,7 @@ def _putPathPrepends():
     parser = configparser.RawConfigParser()
     try:
         f = open(os.path.join(os.path.dirname(os.path.abspath(sys.argv[0])),
-                "binInst.ini"), "rU")
+                "binInst.ini"), "r")    # MM 2023-06: mode "U" has long been deprecated and of no effect
         parser.readfp(f)
         f.close()
 
