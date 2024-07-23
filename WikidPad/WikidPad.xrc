@@ -166,7 +166,7 @@
             <object class="wxButton" name="btnSelectWikiOpenNewDefaultDir">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -207,7 +207,7 @@
               <label>Uppercase first</label>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -364,7 +364,7 @@
             <object class="wxButton" name="btnSelectTempHandlingTempDir">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -792,7 +792,7 @@
             <object class="wxButton" name="btnSelectFaceHtmlPrev">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -893,7 +893,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -906,7 +906,7 @@
               <selection>0</selection>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -965,7 +965,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -976,7 +976,7 @@
               <selection>0</selection>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -1038,7 +1038,7 @@
             <object class="wxButton" name="btnSelectHtmlLinkColor">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -1058,7 +1058,7 @@
             <object class="wxButton" name="btnSelectHtmlALinkColor">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -1078,7 +1078,7 @@
             <object class="wxButton" name="btnSelectHtmlVLinkColor">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -1098,7 +1098,7 @@
             <object class="wxButton" name="btnSelectHtmlTextColor">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -1118,7 +1118,7 @@
             <object class="wxButton" name="btnSelectHtmlBgColor">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -1141,7 +1141,7 @@
               <focused>0</focused>
               <hidden>1</hidden>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -2969,7 +2969,7 @@
             <object class="wxButton" name="btnSelectExportDefaultDir">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -5435,7 +5435,7 @@
             <object class="wxButton" name="btnSelectPath">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -5697,7 +5697,7 @@
           <style>wxALIGN_RIGHT</style>
         </object>
         <option>1</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
         <border>5</border>
       </object>
       <object class="sizeritem">
@@ -5710,7 +5710,7 @@
           <selection>0</selection>
         </object>
         <option>1</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
         <border>5</border>
       </object>
     </object>
@@ -5721,7 +5721,7 @@
       <object class="spacer">
         <size>10,10</size>
         <option>1</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
       </object>
       <object class="sizeritem">
         <object class="wxBoxSizer">
@@ -5731,7 +5731,7 @@
               <label>Show pictures as links</label>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5743,7 +5743,7 @@
                   <style>wxALIGN_RIGHT</style>
                 </object>
                 <option>1</option>
-                <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+                <flag>wxALL|wxEXPAND</flag>
                 <border>5</border>
               </object>
               <object class="sizeritem">
@@ -5767,7 +5767,7 @@
               <checked>1</checked>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5807,7 +5807,7 @@
       <object class="spacer">
         <size>10,10</size>
         <option>1</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
       </object>
       <object class="sizeritem">
         <object class="wxBoxSizer">
@@ -5844,7 +5844,7 @@
               <checked>1</checked>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5853,7 +5853,7 @@
               <checked>1</checked>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5862,7 +5862,7 @@
               <checked>1</checked>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -5885,7 +5885,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5899,7 +5899,7 @@
               <selection>0</selection>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -5915,7 +5915,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5923,7 +5923,7 @@
               <content/>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -5939,7 +5939,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -5948,7 +5948,7 @@
               <checked>0</checked>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -5977,7 +5977,7 @@
           <label>Destination directory:</label>
         </object>
         <option>0</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
         <border>5</border>
       </object>
       <object class="sizeritem">
@@ -5986,7 +5986,7 @@
           <object class="sizeritem">
             <object class="wxTextCtrl" name="tfDestination"/>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>350,-1</minsize>
           </object>
@@ -5994,7 +5994,7 @@
             <object class="wxButton" name="btnSelectDestination">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -6100,7 +6100,7 @@
       <object class="spacer">
         <size>10,10</size>
         <option>1</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
       </object>
       <object class="sizeritem">
         <object class="wxBoxSizer">
@@ -6111,7 +6111,7 @@
               <checked>0</checked>
             </object>
             <option>0</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -6134,7 +6134,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -6142,7 +6142,7 @@
               <content/>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -6159,7 +6159,7 @@
               <hidden>1</hidden>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -6169,7 +6169,7 @@
               <hidden>1</hidden>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -6198,7 +6198,7 @@
           <label>Source directory:</label>
         </object>
         <option>1</option>
-        <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+        <flag>wxALL|wxEXPAND</flag>
         <border>5</border>
       </object>
       <object class="sizeritem">
@@ -6207,7 +6207,7 @@
           <object class="sizeritem">
             <object class="wxTextCtrl" name="tfSource"/>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>350,-1</minsize>
           </object>
@@ -6215,7 +6215,7 @@
             <object class="wxButton" name="btnSelectSource">
               <label>...</label>
             </object>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
             <minsize>20,-1</minsize>
           </object>
@@ -6588,7 +6588,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -6602,7 +6602,7 @@
               <selection>0</selection>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -6618,7 +6618,7 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
@@ -6627,7 +6627,7 @@
               <selection>0</selection>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
@@ -6708,13 +6708,13 @@
               <style>wxALIGN_RIGHT</style>
             </object>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
           <object class="sizeritem">
             <object class="wxTextCtrl" name="tfWikiPageSeparator"/>
             <option>1</option>
-            <flag>wxALL|wxEXPAND|wxALIGN_BOTTOM</flag>
+            <flag>wxALL|wxEXPAND</flag>
             <border>5</border>
           </object>
         </object>
