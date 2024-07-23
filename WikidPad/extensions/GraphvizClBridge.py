@@ -116,29 +116,12 @@ class GraphVizBaseHandler:
 
         # Store token content in a temporary file
         srcfilepath = createTempFile(bstr, ".dot")
+        # print("DEBUG: about to subprocess.run:", [self.extAppExe, "-Tpng", "-o", dstFullPath, srcfilepath])
         try:
-            cmdline = subprocess.list2cmdline((self.extAppExe, "-Tpng", "-o" + dstFullPath,
-                    srcfilepath))
-
-            # Run external application
-#             childIn, childOut, childErr = os.popen3(cmdline, "b")
-            popenObject = subprocess.Popen(cmdline, shell=True,
-                    stderr=subprocess.PIPE, stdout=subprocess.PIPE,
-                    stdin=subprocess.PIPE)
-            childErr = popenObject.stderr
-
-            # See http://bytes.com/topic/python/answers/634409-subprocess-handle-invalid-error
-            # why this is necessary
-            popenObject.stdin.close()
-            popenObject.stdout.close()
-
-            if "noerror" in [a.strip() for a in insToken.appendices]:
-                childErr.read()
-                errResponse = ""
-            else:
-                errResponse = childErr.read()
-            
-            childErr.close()
+            compl_proc = subprocess.run( [self.extAppExe, "-Tpng", "-o", dstFullPath, srcfilepath],
+                capture_output=True
+            )
+            errResponse = compl_proc.stderr.decode()
         finally:
             os.unlink(srcfilepath)
             
@@ -199,11 +182,11 @@ def registerOptions(ver, app):
     # Register options
     app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_dirExe")] = ""
 
-    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeDot")] = "dot.exe"
-    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeNeato")] = "neato.exe"
-    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeTwopi")] = "twopi.exe"
-    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeCirco")] = "circo.exe"
-    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeFdp")] = "fdp.exe"
+    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeDot")] = "dot"
+    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeNeato")] = "neato"
+    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeTwopi")] = "twopi"
+    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeCirco")] = "circo"
+    app.getDefaultGlobalConfigDict()[("main", "plugin_graphViz_exeFdp")] = "fdp"
 
     # Register panel in options dialog
     app.addGlobalPluginOptionsDlgPanel(GraphVizOptionsPanel, "GraphViz")
